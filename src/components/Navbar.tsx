@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { Header, Nav } from './Navbar.styles';
+import {
+  Header,
+  Nav,
+  NavMobileIcon,
+  NavMobileLabel,
+  NavWrapper,
+  StyledLink,
+} from './Navbar.styles';
 
 export const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setNavOpen(false);
+  }, [pathname]);
 
   return (
     <Header>
       <h2>Lottery</h2>
-      <button onClick={() => setIsNavOpen(!isNavOpen)}>x</button>
-      <Nav isNavOpen={isNavOpen}>
-        <button>x</button>
-        <a href="/#">Home</a>
-        <a href="/#">Play</a>
-        <a href="/#">Results</a>
-        <a href="/#">Linkedin</a>
-      </Nav>
+      <NavMobileLabel htmlFor="navi-toggle" onClick={() => setNavOpen(!navOpen)}>
+        <NavMobileIcon navOpen={navOpen} />
+      </NavMobileLabel>
+      <NavWrapper navOpen={navOpen}>
+        <Nav>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/play">Play</StyledLink>
+          <StyledLink to="/results">Results</StyledLink>
+          <StyledLink to="/">Linkedin</StyledLink>
+        </Nav>
+      </NavWrapper>
     </Header>
   );
 };
