@@ -1,17 +1,25 @@
 import React from 'react';
 
-import { ButtonsSection, HeroBanner, RulesSection } from './HomePage.styles';
+import { Button } from '../components/Button';
+import { Card } from '../components/Card';
+import { ButtonsSection, RulesSection } from './HomePage.styles';
 
 export const HomePage = () => {
   return (
     <main>
-      <HeroBanner>
-        <h1>Lottery</h1>
-        <h1>JavaReady.pl</h1>
-      </HeroBanner>
       <ButtonsSection>
-        <button>Play</button>
-        <button>Results</button>
+        <Card>
+          <div>
+            <p>Want to play?</p>
+            <Button>Play</Button>
+          </div>
+        </Card>
+        <Card>
+          <div>
+            <p>Check the results</p>
+            <Button>Results</Button>
+          </div>
+        </Card>
       </ButtonsSection>
       <RulesSection>
         <article>
