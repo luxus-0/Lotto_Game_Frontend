@@ -4,6 +4,16 @@ import styled from 'styled-components';
 import { theme } from '../Theme';
 
 export const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  div {
+    align-self: center;
+    padding: 0.2em;
+  }
+`;
+
+export const HeadBanner = styled.section`
   background-color: ${theme.primary};
   padding: 1em;
   display: flex;

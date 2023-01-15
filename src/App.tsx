@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
+import { Footer } from './components/Footer';
 import { HeroBanner } from './components/HeroBanner';
 import { Navbar } from './components/Navbar';
 import { PageWrapper } from './components/PageWrapper';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
             <Route path="/results" element={<ResultsPage />} />
           </Routes>
         </PageWrapper>
+        <Footer />
       </ThemeProvider>
     </Router>
   );
