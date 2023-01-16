@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import {
-  HeadBanner,
   Header,
   Nav,
   NavMobileIcon,
@@ -21,24 +20,18 @@ export const Navbar = () => {
 
   return (
     <Header>
-      <div>
-        <span>JavaReady.pl</span>
-      </div>
-
-      <HeadBanner>
-        <h2>Lottery</h2>
-        <NavMobileLabel htmlFor="navi-toggle" onClick={() => setNavOpen(!navOpen)}>
-          <NavMobileIcon navOpen={navOpen} />
-        </NavMobileLabel>
-        <NavWrapper navOpen={navOpen}>
-          <Nav>
-            <StyledLink to="/">Home</StyledLink>
-            <StyledLink to="/play">Play</StyledLink>
-            <StyledLink to="/results">Results</StyledLink>
-            <StyledLink to="/">Linkedin</StyledLink>
-          </Nav>
-        </NavWrapper>
-      </HeadBanner>
+      <h4>Lottery</h4>
+      <NavMobileLabel htmlFor="navi-toggle" onClick={() => setNavOpen(!navOpen)}>
+        <NavMobileIcon navOpen={navOpen} />
+      </NavMobileLabel>
+      <NavWrapper navOpen={navOpen}>
+        <Nav>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/play">Play</StyledLink>
+          <StyledLink to="/results">Results</StyledLink>
+          <StyledLink to="/">Linkedin</StyledLink>
+        </Nav>
+      </NavWrapper>
     </Header>
   );
 };

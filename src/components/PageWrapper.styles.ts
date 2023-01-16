@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { theme } from '../Theme';
+
 export const ContentWrapper = styled.main`
   padding: 1em;
   display: flex;
@@ -9,6 +11,7 @@ export const ContentWrapper = styled.main`
 `;
 
 export const Wrapper = styled.div`
+  background-color: ${theme.secondary};
   min-height: 100vh;
   display: flex;
   flex-direction: column;

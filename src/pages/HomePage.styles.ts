@@ -7,14 +7,21 @@ export const ButtonsSection = styled.section`
 `;
 
 export const RulesSection = styled.section`
+  margin-top: 4em;
   ul {
     list-style-type: disc;
     margin: 0;
     padding: 0 0 0 1.5em;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 
-export const RewardsSection = styled.section``;
+export const RewardsSection = styled.section`
+  margin-top: 4em;
+`;
 
 export const CardContent = styled.section`
   display: flex;
