@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { Footer } from './components/Footer';
-import { HeroBanner } from './components/HeroBanner';
-import { Navbar } from './components/Navbar';
 import { PageWrapper } from './components/PageWrapper';
 import { HomePage } from './pages/HomePage';
 import { PlayPage } from './pages/PlayPage';
@@ -15,11 +12,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Navbar />
-        <HeroBanner>
-          <h1>Lottery</h1>
-          <h1>JavaReady.pl</h1>
-        </HeroBanner>
         <PageWrapper>
           <Routes>
             <Route index path="/" element={<HomePage />} />
@@ -27,7 +19,6 @@ const App: React.FC = () => {
             <Route path="/results" element={<ResultsPage />} />
           </Routes>
         </PageWrapper>
-        <Footer />
       </ThemeProvider>
     </Router>
   );
