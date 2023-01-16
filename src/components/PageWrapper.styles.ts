@@ -5,9 +5,11 @@ export const ContentWrapper = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 `;
 
 export const Wrapper = styled.div`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
