@@ -11,7 +11,7 @@ export const ContentWrapper = styled.main`
 `;
 
 export const Wrapper = styled.div`
-  background-color: ${theme.secondary};
+  background: ${theme.background};
   min-height: 100vh;
   display: flex;
   flex-direction: column;

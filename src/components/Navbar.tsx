@@ -11,20 +11,20 @@ import {
 } from './Navbar.styles';
 
 export const Navbar = () => {
-  const [navOpen, setNavOpen] = useState(false);
+  const [isNavOpen, isSetNavOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setNavOpen(false);
+    isSetNavOpen(false);
   }, [pathname]);
 
   return (
     <Header>
       <h4>Lottery</h4>
-      <NavMobileLabel htmlFor="navi-toggle" onClick={() => setNavOpen(!navOpen)}>
-        <NavMobileIcon navOpen={navOpen} />
+      <NavMobileLabel onClick={() => isSetNavOpen(!isNavOpen)}>
+        <NavMobileIcon navOpen={isNavOpen} />
       </NavMobileLabel>
-      <NavWrapper navOpen={navOpen}>
+      <NavWrapper navOpen={isNavOpen}>
         <Nav>
           <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/play">Play</StyledLink>

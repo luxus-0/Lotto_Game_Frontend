@@ -16,13 +16,13 @@ export const HomePage = () => {
         <Card>
           <CardContent>
             <div>Want to play?</div>
-            <Button>Play</Button>
+            <Button type="button">Play</Button>
           </CardContent>
         </Card>
         <Card>
           <CardContent>
             <div>Check the results</div>
-            <Button>Results</Button>
+            <Button type="button">Results</Button>
           </CardContent>
         </Card>
       </ButtonsSection>

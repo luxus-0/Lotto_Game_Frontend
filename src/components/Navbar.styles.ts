@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { theme } from '../Theme';
 
 export const Header = styled.header`
-  background-color: ${theme.primary};
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -64,7 +63,6 @@ export const StyledLink = styled(NavLink)`
   padding: 1rem 0;
   font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
 
   @media (min-width: 1024px) {
@@ -76,7 +74,9 @@ export const StyledLink = styled(NavLink)`
 
 export const NavMobileLabel = styled.label`
   z-index: 1000;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -89,7 +89,7 @@ export const NavMobileIcon = styled.span<{ navOpen: boolean }>`
   position: relative;
   background-color: ${(props) => (props.navOpen ? 'transparent' : theme.secondary)};
   width: 1.4rem;
-  height: 2px;
+  height: 1px;
   display: inline-block;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -99,18 +99,18 @@ export const NavMobileIcon = styled.span<{ navOpen: boolean }>`
     content: '';
     background-color: ${theme.secondary};
     width: 1.4rem;
-    height: 2px;
+    height: 1px;
     display: inline-block;
     position: absolute;
     left: 0;
     transition: all 0.3s ease-in-out;
   }
   &::before {
-    top: ${(props) => (props.navOpen ? '0' : '-0.4rem')};
+    top: ${(props) => (props.navOpen ? '0' : '-0.5rem')};
     transform: ${(props) => (props.navOpen ? 'rotate(45deg)' : 'rotate(0)')};
   }
   &::after {
-    top: ${(props) => (props.navOpen ? '0' : '0.4rem')};
+    top: ${(props) => (props.navOpen ? '0' : '0.5rem')};
     transform: ${(props) => (props.navOpen ? 'rotate(-45deg)' : 'rotate(0)')};
   }
 `;

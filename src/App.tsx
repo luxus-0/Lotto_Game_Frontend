@@ -17,6 +17,7 @@ const App: React.FC = () => {
             <Route index path="/" element={<HomePage />} />
             <Route path="/play" element={<PlayPage />} />
             <Route path="/results" element={<ResultsPage />} />
+            <Route path="/*" element={<div>404</div>} />
           </Routes>
         </PageWrapper>
       </ThemeProvider>
