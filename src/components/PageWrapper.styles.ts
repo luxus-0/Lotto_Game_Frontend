@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import { theme } from '../Theme';
-
-export const ContentWrapper = styled.main`
+export const ContentWrapper = styled.div`
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -11,8 +9,15 @@ export const ContentWrapper = styled.main`
 `;
 
 export const Wrapper = styled.div`
-  background: ${theme.background};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  div {
+    width: 100%;
+    max-width: 1024px;
+    @media (min-width: 1440px) {
+      max-width: 1440px;
+    }
+  }
 `;

@@ -11,9 +11,11 @@ interface Props {
 export const PageWrapper = ({ children }: Props) => {
   return (
     <Wrapper>
-      <Navbar />
-      <ContentWrapper>{children}</ContentWrapper>
-      <Footer />
+      <div>
+        <Navbar />
+        <ContentWrapper>{children}</ContentWrapper>
+        <Footer />
+      </div>
     </Wrapper>
   );
 };

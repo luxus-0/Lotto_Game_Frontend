@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const HeroBanner = styled.div`
   padding: 1.5rem 1rem;
+  display: flex;
 
   h1 {
     font-size: 2rem;
@@ -11,6 +12,12 @@ export const HeroBanner = styled.div`
   }
   span {
     color: white;
+  }
+  img {
+    display: none;
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 `;
 

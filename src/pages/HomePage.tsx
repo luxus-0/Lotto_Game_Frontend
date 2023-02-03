@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Button } from '../components/Button';
-import { Card } from '../components/Card';
 import {
   ButtonsSection,
-  CardContent,
   HeroBanner,
   RewardsSection,
   RulesSection,
@@ -17,20 +15,10 @@ export const HomePage = () => {
         <h1>
           <span>Lottery.</span> Take part and do something <span>good.</span>
         </h1>
+        <img alt="coins" src="../../resources/HeroCoins.webp" />
       </HeroBanner>
       <ButtonsSection>
-        <Card>
-          <CardContent>
-            <div>Want to play?</div>
-            <Button type="button">Play</Button>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent>
-            <div>Check the results</div>
-            <Button type="button">Results</Button>
-          </CardContent>
-        </Card>
+        <Button type="button">Play</Button>
       </ButtonsSection>
       <RulesSection>
         <h3>How to play?</h3>
