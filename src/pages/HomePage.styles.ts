@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+export const HeroBanner = styled.div`
+  padding: 1.5rem 1rem;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    max-width: 17ch;
+    color: gray;
+  }
+  span {
+    color: white;
+  }
+`;
+
 export const ButtonsSection = styled.section`
   display: flex;
   flex-direction: column;

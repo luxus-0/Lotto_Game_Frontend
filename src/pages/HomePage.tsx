@@ -5,6 +5,7 @@ import { Card } from '../components/Card';
 import {
   ButtonsSection,
   CardContent,
+  HeroBanner,
   RewardsSection,
   RulesSection,
 } from './HomePage.styles';
@@ -12,6 +13,11 @@ import {
 export const HomePage = () => {
   return (
     <>
+      <HeroBanner>
+        <h1>
+          <span>Lottery.</span> Take part and do something <span>good.</span>
+        </h1>
+      </HeroBanner>
       <ButtonsSection>
         <Card>
           <CardContent>
