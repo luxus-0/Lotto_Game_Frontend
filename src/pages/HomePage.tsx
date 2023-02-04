@@ -5,6 +5,7 @@ import {
   HeroBanner,
   HeroContent,
   HeroImage,
+  PlayContainer,
   RewardsSection,
   RulesSection,
 } from './HomePage.styles';
@@ -22,6 +23,11 @@ export const HomePage = () => {
           <img alt="coins" src="../../resources/HeroCoins.webp" />
         </HeroImage>
       </HeroBanner>
+      <PlayContainer>
+        <div>
+          Play <span>{'>'}</span>
+        </div>
+      </PlayContainer>
       <RulesSection>
         <h3>How to play?</h3>
         <ul>
