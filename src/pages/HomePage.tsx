@@ -2,8 +2,9 @@ import React from 'react';
 
 import { Button } from '../components/Button';
 import {
-  ButtonsSection,
   HeroBanner,
+  HeroContent,
+  HeroImage,
   RewardsSection,
   RulesSection,
 } from './HomePage.styles';
@@ -12,14 +13,15 @@ export const HomePage = () => {
   return (
     <>
       <HeroBanner>
-        <h1>
-          <span>Lottery.</span> Take part and do something <span>good.</span>
-        </h1>
-        <img alt="coins" src="../../resources/HeroCoins.webp" />
+        <HeroContent>
+          <h1>
+            <span>Lottery.</span> Take part and do something <span>good.</span>
+          </h1>
+        </HeroContent>
+        <HeroImage>
+          <img alt="coins" src="../../resources/HeroCoins.webp" />
+        </HeroImage>
       </HeroBanner>
-      <ButtonsSection>
-        <Button type="button">Play</Button>
-      </ButtonsSection>
       <RulesSection>
         <h3>How to play?</h3>
         <ul>
