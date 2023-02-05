@@ -14,8 +14,8 @@ export const PageWrapper = ({ children }: Props) => {
       <div>
         <Navbar />
         <ContentWrapper>{children}</ContentWrapper>
-        <Footer />
       </div>
+      <Footer />
     </Wrapper>
   );
 };
