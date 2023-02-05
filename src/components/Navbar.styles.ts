@@ -4,26 +4,27 @@ import styled from 'styled-components';
 import { theme } from '../Theme';
 
 export const Header = styled.header`
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
 
-  h4 {
-    margin: 0;
-    padding: 0;
+  div {
     color: ${theme.secondary};
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   @media (min-width: 1024px) {
     align-items: center;
+    padding: 2rem;
   }
 `;
 
 export const NavWrapper = styled.nav<{ navOpen: boolean }>`
   height: 100vh;
   width: 100vw;
-  background-color: ${theme.primary};
+  background-color: #181818;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,7 +34,6 @@ export const NavWrapper = styled.nav<{ navOpen: boolean }>`
   z-index: 2;
   transform: ${(p) => (p.navOpen ? 'translateY(0)' : 'translateY(-100vh)')};
   transition: all 0.5s ease-in-out;
-  overflow: hidden;
 
   @media (min-width: 1024px) {
     height: 100%;
@@ -59,7 +59,7 @@ export const Nav = styled.ul`
 `;
 
 export const StyledLink = styled(NavLink)`
-  color: ${theme.secondary};
+  color: #fff;
   padding: 1rem 0;
   font-size: 1.2rem;
   font-weight: bold;
@@ -87,7 +87,7 @@ export const NavMobileLabel = styled.label`
 
 export const NavMobileIcon = styled.span<{ navOpen: boolean }>`
   position: relative;
-  background-color: ${(props) => (props.navOpen ? 'transparent' : theme.secondary)};
+  background-color: ${(props) => (props.navOpen ? 'transparent' : '#fff')};
   width: 1.4rem;
   height: 1px;
   display: inline-block;
@@ -97,7 +97,7 @@ export const NavMobileIcon = styled.span<{ navOpen: boolean }>`
   &::before,
   &::after {
     content: '';
-    background-color: ${theme.secondary};
+    background-color: #fff;
     width: 1.4rem;
     height: 1px;
     display: inline-block;

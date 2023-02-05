@@ -19,27 +19,28 @@ export const HeroBanner = styled.div`
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
-  @media (min-width: 1024px) {
-    max-width: 50%;
-    align-items: flex-end;
-  }
-
   h1 {
     font-size: 2rem;
     margin: 0;
     max-width: 17ch;
     color: gray;
-    @media (min-width: 1024px) {
-      padding-top: 4rem;
-      font-size: 2.6rem;
-    }
-    @media (min-width: 1440px) {
-      padding-top: 6rem;
-      max-width: 21ch;
-    }
   }
   span {
     color: white;
+  }
+  @media (min-width: 1024px) {
+    max-width: 50%;
+    align-items: flex-end;
+    h1 {
+      padding-top: 4rem;
+      font-size: 2.6rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    h1 {
+      padding-top: 6rem;
+      max-width: 21ch;
+    }
   }
 `;
 
@@ -48,12 +49,14 @@ export const HeroImage = styled.div`
   flex-direction: column;
   align-items: center;
   display: none;
+  img {
+    max-width: 24rem;
+  }
   @media (min-width: 1024px) {
     display: flex;
   }
-  img {
-    max-width: 24rem;
-    @media (min-width: 1440px) {
+  @media (min-width: 1440px) {
+    img {
       max-width: 28rem;
     }
   }

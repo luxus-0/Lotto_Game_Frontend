@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <Header>
-      <h4>Lottery</h4>
+      <div>JavaReady.pl</div>
       <NavMobileLabel onClick={() => isSetNavOpen(!isNavOpen)}>
         <NavMobileIcon navOpen={isNavOpen} />
       </NavMobileLabel>
