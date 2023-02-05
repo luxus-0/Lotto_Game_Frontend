@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { theme } from '../Theme';
@@ -58,76 +59,85 @@ export const HeroImage = styled.div`
   }
 `;
 
-export const PlayContainer = styled.div`
+export const PlayLinkContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 8rem;
   @media (min-width: 1024px) {
     margin-top: 3rem;
   }
+`;
+
+export const PlayLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  max-width: 8ch;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
+
+  span {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  :hover {
+    transform: translateX(0.3rem) scale(105%);
+    color: ${theme.secondary};
+  }
+
+  :hover span {
+    transform: translateX(0.6rem) scale(105%);
+    color: ${theme.secondary};
+  }
+`;
+
+export const DescriptionSection = styled.section`
+  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+
+  h3 {
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
 
   div {
-    display: flex;
-    justify-content: center;
-    max-width: 8ch;
-    cursor: pointer;
     font-size: 1.2rem;
-    font-weight: 500;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-
-    @media (min-width: 1024px) {
-      font-size: 1.5rem;
-    }
-
-    span {
-      margin-left: 0.5rem;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    :hover {
-      transform: translateX(0.3rem) scale(105%);
-      color: ${theme.secondary};
-    }
-
-    :hover span {
-      transform: translateX(0.6rem) scale(105%);
-      color: ${theme.secondary};
-    }
+    margin-bottom: 1rem;
   }
-`;
 
-export const Arrow = styled.div`
-  transition: all 0.3s ease-in-out;
-  :hover {
-    transform: translateX(0.6rem);
-  }
-`;
-
-export const RulesSection = styled.section`
-  margin-top: 4em;
   ul {
-    list-style-type: disc;
+    list-style-type: none;
     margin: 0;
-    padding: 0 0 0 1.5em;
+    padding: 0;
 
     li {
       margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
     }
   }
-`;
 
-export const RewardsSection = styled.section`
-  margin-top: 4em;
-`;
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
 
-export const CardContent = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  div {
-    margin-bottom: 1em;
+    h3 {
+      font-size: 4rem;
+    }
+    div {
+      max-width: 90%;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
   }
 `;

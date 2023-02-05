@@ -1,13 +1,10 @@
-import React from 'react';
-
-import { Button } from '../components/Button';
 import {
+  DescriptionSection,
   HeroBanner,
   HeroContent,
   HeroImage,
-  PlayContainer,
-  RewardsSection,
-  RulesSection,
+  PlayLink,
+  PlayLinkContainer,
 } from './HomePage.styles';
 
 export const HomePage = () => {
@@ -23,28 +20,28 @@ export const HomePage = () => {
           <img alt="coins" src="../../resources/HeroCoins.webp" />
         </HeroImage>
       </HeroBanner>
-      <PlayContainer>
-        <div>
+      <PlayLinkContainer>
+        <PlayLink to="/play">
           Play <span>{'>'}</span>
-        </div>
-      </PlayContainer>
-      <RulesSection>
+        </PlayLink>
+      </PlayLinkContainer>
+      <DescriptionSection>
         <h3>How to play?</h3>
         <ul>
+          <div>This is simple, you just need to follow this steps:</div>
           <li>Try to relax and indulge yourself with a pint of decent quality beer.</li>
           <li>Think of 6 lucky numbers, from 1 to 99.</li>
           <li>Numbers must be distinct.</li>
           <li>Go straight to the lottery page, and input your lucky numbers.</li>
           <li>Note your coupon identifier and wait for the winning numbers draw date!</li>
         </ul>
-      </RulesSection>
-      <RewardsSection>
+
         <h3>Rewards</h3>
         <p>
           Your reward is a unique opportunity to do something good. For each level of win,
           you can support animal shelters!
         </p>
-      </RewardsSection>
+      </DescriptionSection>
     </>
   );
 };
