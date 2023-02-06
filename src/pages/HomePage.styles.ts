@@ -93,12 +93,12 @@ export const PlayLink = styled(NavLink)`
   }
 
   :hover {
-    transform: translateX(0.3rem) scale(105%);
+    transform: translateX(0.3rem) scale(102%);
     color: ${theme.secondary};
   }
 
   :hover span {
-    transform: translateX(0.6rem) scale(105%);
+    transform: translateX(0.6rem) scale(102%);
     color: ${theme.secondary};
   }
 `;

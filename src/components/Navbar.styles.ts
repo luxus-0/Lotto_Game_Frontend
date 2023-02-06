@@ -17,7 +17,7 @@ export const Header = styled.header`
 
   @media (min-width: 1024px) {
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 `;
 
