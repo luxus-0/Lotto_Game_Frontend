@@ -27,7 +27,6 @@ export const NavWrapper = styled.nav<{ navOpen: boolean }>`
   background-color: #181818;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -46,24 +45,28 @@ export const NavWrapper = styled.nav<{ navOpen: boolean }>`
 
 export const Nav = styled.ul`
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1.2rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    padding: 0;
   }
 `;
 
 export const StyledLink = styled(NavLink)`
   color: #fff;
-  padding: 1rem 0;
-  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  font-size: 2.2rem;
   font-weight: bold;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    color: ${theme.secondary};
+  }
 
   @media (min-width: 1024px) {
     padding: 0 1rem;
