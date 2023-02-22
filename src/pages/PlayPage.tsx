@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
+import { ErrorMessage } from '../components/ErrorMessage';
 import { PageHeader } from '../components/PageHeader';
 import { useApi } from '../composables/useApi';
 import { FormButtonsContainer, FormContainer, Input } from './PlayPage.styles';
 
 export const PlayPage = () => {
   const [inputs, setInputs] = useState(Array(6).fill(''));
-  const { sendNumbers } = useApi();
+  const { sendNumbers, postRequestError } = useApi();
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -17,6 +18,30 @@ export const PlayPage = () => {
     const updatedInputs = [...inputs];
     updatedInputs[index] = event.target.value;
     setInputs(updatedInputs);
+
+    if (updatedInputs[index].length > 2) {
+      updatedInputs[index] = updatedInputs[index].slice(0, 2);
+    }
+    if (updatedInputs[index].charAt(0) == 0) {
+      updatedInputs[index] = updatedInputs[index].slice(1);
+    }
+  };
+
+  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (event.key) {
+      case '-':
+        event.preventDefault();
+        return false;
+      case '.':
+        event.preventDefault();
+        return false;
+      case ',':
+        event.preventDefault();
+        return false;
+      case '+':
+        event.preventDefault();
+        return false;
+    }
   };
 
   const fillRandom = () => {
@@ -44,6 +69,7 @@ export const PlayPage = () => {
                 type="number"
                 value={input}
                 onChange={(event) => handleInputChange(event, index)}
+                onKeyDown={(event) => handleInputKeyDown(event)}
                 required
                 min={1}
                 max={99}
@@ -56,6 +82,11 @@ export const PlayPage = () => {
             </Button>
             <Button type="submit">Submit</Button>
           </FormButtonsContainer>
+          <ErrorMessage>
+            {postRequestError
+              ? 'Something went wrong. Please try again or refresh the page'
+              : ''}
+          </ErrorMessage>
         </FormContainer>
       </Card>
     </>
