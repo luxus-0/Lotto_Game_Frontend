@@ -75,7 +75,7 @@ export const PlayPage = () => {
             <Button type="button" onClick={fillRandom}>
               {t('randomMessage')}
             </Button>
-            <Button type="submit" onClick={() => sendNumbers({ typedNumbers: inputs })}>
+            <Button type="submit" onClick={() => sendNumbers({ inputNumbers: inputs })}>
               {t('submitMessage')}
             </Button>
           </ButtonsContainer>

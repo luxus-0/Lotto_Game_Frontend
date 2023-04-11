@@ -10,9 +10,11 @@ import { LinksContainer, TicketContainer } from './TicketPage.styles';
 export const TicketPage = () => {
   const [isCopied, setIsCopied] = useState(false);
   const {
-    ticket: { creationDateTime, expirationDateTime, status, uuid },
+    ticketDto: { hash, drawDate },
+  } = useApi().ticket;
+  const {
+    ticket: { message },
   } = useApi();
-
   const convertDate = (date: string) => {
     if (!date) return;
     else return date.replace('T', ' ').replace('Z', '').split('.').shift();
@@ -30,18 +32,15 @@ export const TicketPage = () => {
           <ul>
             <li>
               {t('idMessage')}
-              <CopyToClipboard text={uuid} onCopy={() => setIsCopied(true)}>
-                <span style={{ cursor: 'pointer' }}>{uuid}</span>
+              <CopyToClipboard text={hash} onCopy={() => setIsCopied(true)}>
+                <span style={{ cursor: 'pointer' }}>{hash}</span>
               </CopyToClipboard>
             </li>
             <li>
-              {t('createdMessage')} {convertDate(creationDateTime)}
+              {t('createdMessage')} {convertDate(drawDate)}
             </li>
             <li>
-              {t('expiresMessage')} {convertDate(expirationDateTime)}
-            </li>
-            <li>
-              {t('statusMessage')} {status}
+              {t('statusMessage')} {message}
             </li>
           </ul>
         </TicketContainer>

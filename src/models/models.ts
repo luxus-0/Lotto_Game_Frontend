@@ -1,10 +1,16 @@
 export interface TypedNumbers {
-  typedNumbers: string[];
+  inputNumbers: string[];
 }
+
 export interface TicketBody {
-  uuid: string;
-  creationDateTime: string;
-  expirationDateTime: string;
+  ticketDto: TicketDto;
+  message: string;
+}
+
+export interface TicketDto {
+  hash: string;
+  drawDate: string;
+  numbers: number[];
   status: string;
 }
 

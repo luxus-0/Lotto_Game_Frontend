@@ -13,36 +13,19 @@ import {
   LinksContainer,
   NumbersDrawnMessage,
   NumbersLoadingMessage,
-  WinningNumbersButton,
 } from './CheckResultsPage.styles';
 
 export const CheckResultsPage = () => {
   const [ticketId, setTicketId] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { getResults, generateWinningNumbers, getRequestError, winningNumbersGenerated } =
-    useApi();
-
-  const drawWinningNumbers = () => {
-    generateWinningNumbers();
-    setIsLoading(true);
-  };
+  const [isLoading] = useState(false);
+  const { getResults, getRequestError, winningNumbersGenerated } =
+      useApi();
 
   return (
     <>
       <PageHeader>
         <h2>{t('checkResultsMessage')}</h2>
-        <p>
-          {t('drawNumbers1Message')}&nbsp;
-          <WinningNumbersButton
-            role={Button}
-            onClick={drawWinningNumbers}
-            onKeyPress={drawWinningNumbers}
-          >
-            {t('drawNumbers2Message')}
-          </WinningNumbersButton>
-          &nbsp; {t('drawNumbers3Message')}
-        </p>
+        <p>{t('drawNumbers1Message')}&nbsp;</p>
         <NumbersLoadingMessage>
           {isLoading && !winningNumbersGenerated ? t('waitingMessage') : ''}
         </NumbersLoadingMessage>

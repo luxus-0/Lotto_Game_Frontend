@@ -15,7 +15,7 @@ export const useApi = () => {
 
   const sendNumbers = async (numbers: TypedNumbers) => {
     try {
-      const response = await axios.post('/api/api/v1/receiver', numbers);
+      const response = await axios.post('http://localhost:8000/inputNumbers', numbers);
       ticket = response.data;
       navigate('/ticket');
     } catch (error) {
@@ -26,7 +26,7 @@ export const useApi = () => {
 
   const getResults = async (ticketId: string) => {
     try {
-      const response = await axios.get(`/api/api/v1/results/${ticketId}`);
+      const response = await axios.get(`http://localhost:8000/results/${ticketId}`);
       lotteryResults = response.data;
       navigate('/checkResults/results');
     } catch (error) {

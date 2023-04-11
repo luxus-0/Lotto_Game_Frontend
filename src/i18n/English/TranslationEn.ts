@@ -23,7 +23,7 @@ export const translationEn = {
   randomMessage: 'Random',
   submitMessage: 'Submit',
   checkResultsMessage: 'Check results',
-  drawNumbers1Message: `Winning numbers are drawn every Saturday. However, if you don't want to wait until Saturday, just`,
+  drawNumbers1Message: `Winning numbers are drawn every Saturday.`,
   drawNumbers2Message: `draw\xa0the\xa0winning\xa0numbers`,
   drawNumbers3Message: ' now!',
   insertIdMessage: 'Insert your ticket id:',
@@ -41,7 +41,7 @@ export const translationEn = {
   copyTicketMessage: 'Copy the ticket ID by clicking on it',
   copiedMessage: 'Copied ✓',
   idMessage: 'ID: ',
-  createdMessage: 'Created: ',
+  createdMessage: 'Draw Date: ',
   expiresMessage: 'Expires: ',
   statusMessage: 'Status: ',
 };
