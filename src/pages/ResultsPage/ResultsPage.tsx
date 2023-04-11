@@ -8,18 +8,22 @@ import { LinksContainer, ResultsContainer } from './ResultsPage.styles';
 
 export const ResultsPage = () => {
   const {
-    lotteryResults: { isWinner, matchedNumbers, typedNumbers, winningNumbers },
+    responseDto: { isWinner, hitNumbers, numbers, wonNumbers },
+  } = useApi().lotteryResults;
+  const {
+    lotteryResults: { message },
   } = useApi();
 
   const convertArray = (arr: number[]) => {
     if (!arr) return;
     else return arr.join(', ');
   };
-
+  console.log(useApi().lotteryResults);
   return (
     <>
       <Card>
-        {winningNumbers == null ? (
+        {message === null ||
+        message === 'Results are being calculated, please come back later' ? (
           <div>{t('goBackAndDrawMessage')}</div>
         ) : (
           <ResultsContainer>
@@ -33,13 +37,13 @@ export const ResultsPage = () => {
             )}
             <ul>
               <li>
-                {t('winningNumbersMessage')} {convertArray(winningNumbers)}
+                {t('winningNumbersMessage')} {convertArray(wonNumbers)}
               </li>
               <li>
-                {t('yourNumbersMessage')} {convertArray(typedNumbers)}
+                {t('yourNumbersMessage')} {convertArray(numbers)}
               </li>
               <li>
-                {t('matchedNumbersMessage')} {convertArray(matchedNumbers)}
+                {t('matchedNumbersMessage')} {convertArray(hitNumbers)}
               </li>
             </ul>
           </ResultsContainer>

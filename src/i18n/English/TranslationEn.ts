@@ -32,7 +32,7 @@ export const translationEn = {
   goBackAndDrawMessage: 'Go back and draw numbers or wait till Saturday',
   noWinMessage: `Unfortunately, you didn't win :(`,
   youWinMessage: 'You win the lottery!',
-  thanksToYouMessage: 'Thanks to you, animals will live well :)',
+  thanksToYouMessage: 'Thanks!',
   winningNumbersMessage: 'Winning numbers: ',
   yourNumbersMessage: 'Your numbers: ',
   matchedNumbersMessage: 'Matched numbers: ',

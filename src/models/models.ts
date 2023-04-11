@@ -14,11 +14,18 @@ export interface TicketDto {
   status: string;
 }
 
-export interface lotteryResultsBody {
+export interface LotteryResultsBody {
+  responseDto: ResponseDto;
+  message: string;
+}
+
+export interface ResponseDto {
+  drawDate: string;
+  hash: string;
+  hitNumbers: number[];
   isWinner: boolean;
-  winningNumbers: number[];
-  typedNumbers: number[];
-  matchedNumbers: number[];
+  numbers: number[];
+  wonNumbers: number[];
 }
 
 export interface ThemeType {

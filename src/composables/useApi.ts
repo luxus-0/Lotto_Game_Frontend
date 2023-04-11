@@ -2,10 +2,10 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { lotteryResultsBody, TicketBody, TypedNumbers } from '../models/models';
+import { LotteryResultsBody, TicketBody, TypedNumbers } from '../models/models';
 
 let ticket = <TicketBody>{};
-let lotteryResults = <lotteryResultsBody>{};
+let lotteryResults = <LotteryResultsBody>{};
 
 export const useApi = () => {
   const navigate = useNavigate();
