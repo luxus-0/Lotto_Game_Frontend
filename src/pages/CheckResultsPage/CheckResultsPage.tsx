@@ -18,8 +18,7 @@ import {
 export const CheckResultsPage = () => {
   const [ticketId, setTicketId] = useState('');
   const [isLoading] = useState(false);
-  const { getResults, getRequestError, winningNumbersGenerated } =
-      useApi();
+  const { getResults, getRequestError, winningNumbersGenerated } = useApi();
 
   return (
     <>
