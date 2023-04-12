@@ -11,14 +11,13 @@ import {
   Container,
   Input,
   LinksContainer,
-  NumbersDrawnMessage,
   NumbersLoadingMessage,
 } from './CheckResultsPage.styles';
 
 export const CheckResultsPage = () => {
   const [ticketId, setTicketId] = useState('');
   const [isLoading] = useState(false);
-  const { getResults, getRequestError, winningNumbersGenerated } = useApi();
+  const { getResults, getRequestError } = useApi();
 
   return (
     <>
@@ -26,11 +25,8 @@ export const CheckResultsPage = () => {
         <h2>{t('checkResultsMessage')}</h2>
         <p>{t('drawNumbers1Message')}&nbsp;</p>
         <NumbersLoadingMessage>
-          {isLoading && !winningNumbersGenerated ? t('waitingMessage') : ''}
+          {isLoading ? t('waitingMessage') : ''}
         </NumbersLoadingMessage>
-        <NumbersDrawnMessage>
-          {winningNumbersGenerated ? t('numbersDrawnMessage') : ''}
-        </NumbersDrawnMessage>
       </PageHeader>
       <Card>
         <Container>

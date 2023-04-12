@@ -11,7 +11,6 @@ export const useApi = () => {
   const navigate = useNavigate();
   const [postRequestError, setPostRequestError] = useState(false);
   const [getRequestError, setGetRequestError] = useState(false);
-  const [winningNumbersGenerated, setWinningNumbersGenerated] = useState(false);
 
   const sendNumbers = async (numbers: TypedNumbers) => {
     try {
@@ -34,23 +33,11 @@ export const useApi = () => {
       else setGetRequestError(false);
     }
   };
-
-  const generateWinningNumbers = async () => {
-    try {
-      await axios.get('/api/generate');
-      setWinningNumbersGenerated(true);
-    } catch (error) {
-      setGetRequestError(true);
-    }
-  };
-
   return {
     sendNumbers,
     getResults,
-    generateWinningNumbers,
     postRequestError,
     getRequestError,
-    winningNumbersGenerated,
     ticket,
     lotteryResults,
   };
