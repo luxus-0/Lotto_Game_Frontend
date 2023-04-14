@@ -23,7 +23,8 @@ export const ResultsPage = () => {
     <>
       <Card>
         {message === null ||
-        message === 'Results are being calculated, please come back later' ? (
+        message === 'Results are being calculated, please come back later' ||
+        message === 'You have already checked your ticket, please come back later' ? (
           <div>{t('goBackAndDrawMessage')}</div>
         ) : (
           <ResultsContainer>
