@@ -23,9 +23,9 @@ export const useApi = () => {
     }
   };
 
-  const getResults = async (ticketId: string) => {
+  const getResults = async (ticketUUID: string) => {
     try {
-      const response = await axios.get(`/api/results/${ticketId}`);
+      const response = await axios.get(`/api/results/${ticketUUID}`);
       lotteryResults = response.data;
       navigate('/checkResults/results');
     } catch (error) {
