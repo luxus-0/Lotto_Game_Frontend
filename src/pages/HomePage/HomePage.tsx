@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 
 import { GoToLink } from '../../components/GoToLink';
 import {
-  DescriptionSection,
-  HeroBanner,
-  HeroContent,
-  HeroImage,
-  PlayLinkContainer,
+  HomeDescription,
+  HomeBanner,
+  HomeContent,
+  HomeImage,
+  HomePlayLinkContainer,
 } from './HomePage.styles';
 
 export const HomePage = () => {
@@ -14,23 +14,23 @@ export const HomePage = () => {
 
   return (
     <>
-      <HeroBanner>
-        <HeroContent>
+      <HomeBanner>
+        <HomeContent>
           <h1>
             <span>{t('lotteryMessage')}</span> {t('takePartMessage')}{' '}
             <span>{t('goodMessage')}</span>
           </h1>
-        </HeroContent>
-        <HeroImage>
-          <img alt="coins" src="HeroCoins.webp" />
-        </HeroImage>
-      </HeroBanner>
-      <PlayLinkContainer>
+        </HomeContent>
+        <HomeImage>
+          <img alt="LOTTO GAME" src="lotto.jpg" />
+        </HomeImage>
+      </HomeBanner>
+      <HomePlayLinkContainer>
         <GoToLink to="/play">
           {t('playMessage')} <span>{'>'}</span>
         </GoToLink>
-      </PlayLinkContainer>
-      <DescriptionSection>
+      </HomePlayLinkContainer>
+      <HomeDescription>
         <h3>{t('howToPlayMessage')}</h3>
         <ul>
           <div>{t('thisIsSimpleMessage')}</div>
@@ -43,7 +43,7 @@ export const HomePage = () => {
 
         <h3>{t('rewardsMessage')}</h3>
         <p>{t('rewardsDescriptionMessage')}</p>
-      </DescriptionSection>
+      </HomeDescription>
     </>
   );
 };
