@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 
 import { GoToLink } from '../../components/GoToLink';
 import {
-  HomeDescription,
   HomeBanner,
   HomeContent,
+  HomeDescription,
   HomeImage,
   HomePlayLinkContainer,
 } from './HomePage.styles';
