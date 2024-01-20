@@ -1,1 +1,1 @@
-# Lottery app for JavaReady.pl
+# Lotto Game Frontend
