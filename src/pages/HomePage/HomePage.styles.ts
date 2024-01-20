@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeroBanner = styled.div`
+export const HomeBanner = styled.div`
   padding: 1.5rem 1rem;
   display: flex;
   width: 100%;
@@ -14,7 +14,7 @@ export const HeroBanner = styled.div`
   }
 `;
 
-export const HeroContent = styled.div`
+export const HomeContent = styled.div`
   display: flex;
   flex-direction: column;
   h1 {
@@ -42,7 +42,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const HeroImage = styled.div`
+export const HomeImage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@ export const HeroImage = styled.div`
   }
 `;
 
-export const PlayLinkContainer = styled.div`
+export const HomePlayLinkContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 8rem;
@@ -69,7 +69,7 @@ export const PlayLinkContainer = styled.div`
   }
 `;
 
-export const DescriptionSection = styled.section`
+export const HomeDescription = styled.section`
   margin: 4em 0;
   display: flex;
   flex-direction: column;
